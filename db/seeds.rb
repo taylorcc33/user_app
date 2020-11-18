@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+10.times do
+  user = User.create(
+    full_name: Faker::TvShows::TwinPeaks.character,
+    age: rand(18..99),
+    gender: ['male', 'female'].sample,
+    alive: [true, false].sample
+  )
+end
